@@ -1,3 +1,4 @@
+// vault keys: scratch/vault/keys/ (values never in code; see scratch/STANDARDS.md)
 // Vercel serverless function: GET /api/radar?q=... -> scored sample feed.
 // Zero-spend, no secrets, read-only. WASM fast path with exact JS fallback
 // (mirror of scorer.c score_blob). Compile scorer.c with emcc when a
