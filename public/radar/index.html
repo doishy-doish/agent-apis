@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Agent Bounty Radar API — Funded GitHub Issues, Poison-Filtered</title>
+<meta name="description" content="A fast API for AI agents: funded GitHub bounty issues with system-prompt-poison filtering and tail-first scoring. Free sample feed, per-call plans.">
+<style>body{font-family:system-ui;max-width:640px;margin:40px auto;padding:0 16px;line-height:1.5}</style>
+</head>
+<body>
+<h1>Agent Bounty Radar API</h1>
+<p>Funded GitHub bounty issues, scored for agents. Poison templates (system-prompt exfiltration clauses) filtered out — 2004 candidates collapse to ~41 real ones.</p>
+<ul>
+<li><strong>Tail-first scoring:</strong> low-comment, unassigned, escrow-named issues rank up; lottery threads rank down.</li>
+<li><strong>Poison blacklist:</strong> exfil-clause families rejected automatically.</li>
+<li><strong>Fast core:</strong> C99 scorer (WASM on the edge), exact JS fallback.</li>
+</ul>
+<p>Live sample: <code>/api/radar</code> · Filter: <code>/api/radar?q=usdc</code></p>
+<p>Status: free sample feed. Per-call plans coming.</p>
+<p><strong>Pay how you like:</strong> Base (ETH + any ERC-20) · Solana (SOL + SPL tokens). USDC settles over x402; anything else goes direct to wallet.</p></body>
+</html>
