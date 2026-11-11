@@ -1,3 +1,4 @@
+/* vault keys: scratch/vault/keys/ (values never in code; see scratch/STANDARDS.md) */
 /* poison.c — C99, no deps. Fast exfil-phrase scanner. gcc -O2 -std=c99 poison.c -o poison */
 #include <stdio.h>
 #include <string.h>
