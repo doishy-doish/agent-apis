@@ -29,7 +29,7 @@ const FEED = [
   { repo: "PinkBoxTerminal/agent-bounty-experiment", num: 2, title: "Independent verification — quote your fee (USDC Base)", comments: 4, verdict: "CHECK — verify escrow, independence edge", score: 45 },
 ];
 module.exports = (req, res) => {
-  { const proto = String((req.headers["x-forwarded-proto"]||"https")).split(",")[0]; const host = req.headers.host || "agent-apis-bb4agbmzp-agent1-48fb.vercel.app"; if (!X402.gate(req, res, proto + "://" + host + "/api/radar", "Bounty radar score: paid per request")) return; }
+  if (!X402.gate(req, res, "Bounty radar score: paid per request")) return;
   const q = (req.query.q || "").toLowerCase();
   const items = FEED.filter((i) => !q || (i.title + " " + i.repo).toLowerCase().includes(q))
     .map((i) => ({ ...i, score: scoreIssue(i.title, "", i.comments, false) < 0 ? i.score : i.score }));
