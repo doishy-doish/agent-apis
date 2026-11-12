@@ -1,0 +1,41 @@
+{
+  "x402Version": 2,
+  "service": {
+    "name": "agent-apis",
+    "description": "Bounty-radar scoring and exfil-clause poison detection for AI agents, paid per call in USDC on Base.",
+    "url": "https://agent-apis-agent1-48fb.vercel.app",
+    "contact": "10a11andralemisquitta@gmail.com"
+  },
+  "resources": [
+    {
+      "url": "https://agent-apis-agent1-48fb.vercel.app/api/radar",
+      "method": "GET",
+      "description": "Bounty radar score: paid per request. Example: ?q=escrow",
+      "mimeType": "application/json",
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "eip155:8453",
+          "amount": "10000",
+          "asset": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA4",
+          "payTo": "0x9592d926920D99758fD3394c88f35959af6aD888"
+        }
+      ]
+    },
+    {
+      "url": "https://agent-apis-agent1-48fb.vercel.app/api/poison",
+      "method": "GET",
+      "description": "Exfil-clause poison detector: paid per request.",
+      "mimeType": "application/json",
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "eip155:8453",
+          "amount": "10000",
+          "asset": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA4",
+          "payTo": "0x9592d926920D99758fD3394c88f35959af6aD888"
+        }
+      ]
+    }
+  ]
+}
